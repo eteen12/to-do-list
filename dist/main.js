@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",(function(){document.querySelector(".submit").addEventListener("click",(function(){alert("hey")}))}))})();
