@@ -1,12 +1,11 @@
 import renderFunc from "./render";
 import myTasks from './data';
 
-const toggleDone = (index) => {
+const toggleBtn = (index) => {
 
-   const task = myTasks[index];
+   myTasks[index].completed = !myTasks[index].completed;
+    renderFunc();
+   
 
-   task.completed = !task.completed;
-
-   renderFunc();
 }
-export default toggleDone;
+export default toggleBtn;

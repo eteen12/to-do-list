@@ -21,6 +21,7 @@
     align-items: center;
 }
 .task-wrapper{
+    margin-top:2%;
     display: grid;
     grid-template-columns: 4(repeat(20%));
     border:1px solid black;
@@ -29,13 +30,17 @@
 }
 .user-wrapper{
     border:1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .task-name{
     font-size: 20px;
-    color:black
+    color:black;
 }
 .task-completed{
-    color:black
+    color:black;
 }
 .toggle-complete{
     color:black;

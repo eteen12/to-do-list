@@ -1,6 +1,7 @@
 import removeTask from './remove';
 import myTasks from './data';
-import toggleDone from './toggle';
+import toggleBtn from './toggle';
+
 
 const renderFunc = () => {
     let taskWrapper = document.querySelector('.task-wrapper');
@@ -19,14 +20,15 @@ const renderFunc = () => {
 
         let taskComplete = document.createElement('p');
         taskComplete.classList.add('task-completed');
-        taskComplete.textContent = taskItem ? 'complete' : 'not complete yet';
+        taskComplete.textContent = taskItem.completed ? 'complete' : 'not complete yet';
         userWrapper.appendChild(taskComplete);
+       
 
        let toggleComplete = document.createElement('button');
        toggleComplete.classList.add('toggle-complete');
-       toggleComplete.textContent = 'toggle';
-       toggleComplete.addEventListener("click",function(){
-        toggleDone(i);
+       toggleComplete.textContent = taskItem.completed ? 'Mark as Complete': 'Mark as Not Complete'; 
+       toggleComplete.addEventListener("click", function() {
+        toggleBtn(i);
        })
        userWrapper.appendChild(toggleComplete);
 

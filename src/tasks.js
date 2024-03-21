@@ -2,6 +2,12 @@ import renderFunc from './render';
 import myTasks from './data';
 
 const taskFunc = () => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const addButton = document.querySelector('.add-btn');
+        addButton.addEventListener('click', () => {
+            taskFunc();
+        });
+    });
 
     function tasks(task, completed) {
         this.task = task;
@@ -9,13 +15,18 @@ const taskFunc = () => {
     }
 
     function addTask() {
-        const task = document.querySelector('.task').value;
-        const completed = document.querySelector('.completed').value;
+        const taskInput = document.querySelector('#task').value;
+        const completed = 'not complete yet';
 
-        let newTask = new tasks(task, completed);
+        let newTask = new tasks(taskInput, completed);
         myTasks.push(newTask);
         renderFunc();
     }
+
+    return {
+        addTask
+    };
 }
 
 export default taskFunc;
+
