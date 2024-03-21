@@ -1,0 +1,45 @@
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.submit{
+    border-radius: 50%;
+    padding:5px;
+}
+.parameters{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-wrapper{
+    display: grid;
+    grid-template-columns: 4(repeat(20%));
+    border:1px solid black;
+    height:auto;
+    width: 100%;
+}
+.user-wrapper{
+    border:1px solid black;
+}
+.task-name{
+    font-size: 20px;
+    color:black
+}
+.task-completed{
+    color:black
+}
+.toggle-complete{
+    color:black;
+}
+.remove-btn{
+    color:black;
+}

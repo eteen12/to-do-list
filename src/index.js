@@ -1,2 +1,3 @@
-import buttonFunction from './button';
+import btnFunc from './button';
 
+btnFunc();
