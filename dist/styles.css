@@ -1,12 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+body{
+    padding:0;
+    margin:0;
+}
+.title, .task, .task-name, .task-completed{
+    font-family: "Truculenta", sans-serif;
+    color:white;
+}
+.task{
+    font-size:25px;
+}
+input{
+    border-radius: 20px;
+    padding:5%;
+}
 .main-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #c4b5fd;
 }
 .submit{
     border-radius: 50%;
     padding:5px;
+    background-color: #67e8f9;
+    border:transparent;
+}
+.submit:hover{
+    transform: scale(1.5);
+}
+@keyframes touchAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media (hover: none) {
+    .submit {
+        animation: touchAnimation 1s forwards; /* Keep the last keyframe applied after the animation */
+    }
 }
 .parameters{
     margin-top: 2%;
@@ -19,14 +57,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top:5%;
+}
+.add-btn{
+    border-radius: 10px;
+    font-family: "Truculenta", sans-serif;
+    font-size: 20px;
+    background-color: #67e8f9;
+    border:transparent;
 }
 .task-wrapper{
-    margin-top:2%;
     display: grid;
-    grid-template-columns: 4(repeat(20%));
-    border:1px solid black;
+    grid-template-columns: repeat(1,80%);
+    grid-gap:20px;
     height:auto;
     width: 100%;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.section2{
+    background-color: #67e8f9;
+    min-height: 100vh;
+    height: auto;
 }
 .user-wrapper{
     border:1px solid black;
@@ -34,7 +87,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    margin:0;
+    background-color: #fcd34d;
+    border-radius:30px;
+    border: transparent;
 }
+
 .task-name{
     font-size: 20px;
     color:black;
@@ -43,8 +102,20 @@
     color:black;
 }
 .toggle-complete{
-    color:black;
+    border-radius: 10px;
+    font-family: "Truculenta", sans-serif;
+    font-size: 20px;
+    background-color: #c4b5fd;
+    border:transparent;
+    margin-bottom: 2%;
+    border:4px solid #67e8f9;
 }
 .remove-btn{
-    color:black;
+    border-radius: 10px;
+    font-family: "Truculenta", sans-serif;
+    font-size: 20px;
+    background-color: #c4b5fd;
+    border:transparent;
+    margin-bottom: 1%;
+    border:4px solid #67e8f9;
 }

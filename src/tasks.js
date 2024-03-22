@@ -8,6 +8,8 @@ const taskFunc = () => {
             taskFunc();
         });
     });
+   
+
 
     function tasks(task, completed) {
         this.task = task;
@@ -16,7 +18,7 @@ const taskFunc = () => {
 
     function addTask() {
         const taskInput = document.querySelector('#task').value;
-        const completed = 'not complete yet';
+        const completed = false;
 
         let newTask = new tasks(taskInput, completed);
         myTasks.push(newTask);

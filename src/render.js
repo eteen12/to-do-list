@@ -6,6 +6,7 @@ import toggleBtn from './toggle';
 const renderFunc = () => {
     let taskWrapper = document.querySelector('.task-wrapper');
     taskWrapper.innerHTML = '';
+    
     for(let i = 0; i<myTasks.length;i++){
         let taskItem = myTasks[i];
 
@@ -20,7 +21,9 @@ const renderFunc = () => {
 
         let taskComplete = document.createElement('p');
         taskComplete.classList.add('task-completed');
-        taskComplete.textContent = taskItem.completed ? 'complete' : 'not complete yet';
+        taskComplete.textContent = taskItem.completed ? 'Not Complete yet' : 'Complete';
+
+
         userWrapper.appendChild(taskComplete);
        
 
